@@ -11,7 +11,7 @@ export const TrackDetails = (props: TrackDetailsProps) => {
 
     return (
         <div className={styles.track}>
-            <h2>Track Details</h2>
+            <h2>Track Information</h2>
             {!selectedTrackId && <span>No selected track</span>}
             {selectedTrackId && !selectedTrack && <span>Loading...</span>}
 
