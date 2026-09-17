@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Lion77777.github.io/react-playlist",
   "name": "playlist1",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +8,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run deploy",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start"
   },
   "dependencies": {
     "clsx": "^2.1.1",
