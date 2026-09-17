@@ -1,13 +1,13 @@
-const apiKey = '917c56d4-a2b9-49f7-9760-57dcd872365e'
-const headers = {
-    'api-key': apiKey
+const apiKey = import.meta.env.VITE_API_KEY
+const headers: HeadersInit = {}
+
+if(apiKey) {
+    headers['api-key'] = apiKey
 }
 
 export const getTrack = (id: string) => {
     return fetch('https://musicfun.it-incubator.app/api/1.0/playlists/tracks/' + id, {
-        headers: {
-            'api-key': '917c56d4-a2b9-49f7-9760-57dcd872365e'
-        }
+        headers
     })
         .then(res => res.json())
 }
